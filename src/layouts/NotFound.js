@@ -1,7 +1,9 @@
 import React from 'react';
 import './notfound.css';
+import { useNavigate } from 'react-router-dom';
 
 const NotFound = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex-1 flex overflow-y-auto justify-center items-center font-outfit">
       <div className="flex flex-col relative">
@@ -16,7 +18,9 @@ const NotFound = () => {
           <h1>404</h1>
           <h1>404</h1>
         </div>
-        <button className="bg-black text-white rounded-lg top-24 relative h-10">
+        <button
+          onClick={() => navigate('/')}
+          className="bg-black text-white rounded-lg top-24 relative h-10">
           Back to Home
         </button>
       </div>
